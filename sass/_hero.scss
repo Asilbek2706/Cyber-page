@@ -1,0 +1,101 @@
+@use "./variables" as v;
+
+.hero {
+  display: flex;
+  justify-content: center; // Markazlashtirish
+  align-items: center;
+  gap: 80px;               // Haker va matn orasidagi rasmda ko'ringan masofa
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  position: relative;
+
+  &__image {
+    position: relative;
+    width: 600px;         // Haker blokining kengligi
+    height: 600px;        // Balandlik
+
+    img {
+      position: absolute;
+    }
+
+    // SIZNING KODINGIZ (O'zgarmadi)
+    .decor-stats {
+      left: 20px;
+      top: 50px;
+      width: 200px;
+      z-index: 2;
+    }
+
+    .decor-star {
+      left: 350px;
+      top: 80px;
+      width: 200px;
+      z-index: 1;
+    }
+
+    .main-person {
+      left: 150px;
+      top: 0;
+      width: 500px;
+      z-index: 3;
+      filter: drop-shadow(4px 4px 0 white) drop-shadow(-4px -4px 0 white);
+    }
+  }
+
+  &__content {
+    position: relative;
+    flex: 1;
+    z-index: 10;
+  }
+}
+
+.title {
+  font-size: 5.5rem;
+  font-weight: 900;
+  line-height: 0.85;
+  margin-bottom: 2rem;
+  color: #000;
+
+  .highlight {
+    background-color: v.$primary; // Yashil fon
+    padding: 0 15px;
+    display: inline-block;
+  }
+}
+
+.info-box {
+  background-color: #000;
+  color: #fff;
+  padding: 40px;
+  max-width: 500px;
+  position: relative; // Qulf bunga nisbatan joylashadi
+
+  &__header .tag {
+    background: #fff;
+    color: #000;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+    padding: 2px 10px;
+  }
+
+  .qulf {
+    position: absolute;
+    bottom: -40px;
+    right: -40px;
+    width: 140px;
+    z-index: 20;
+  }
+}
+
+// Haker va matn orasidagi globus
+.sphere {
+  position: absolute;
+  left: -60px; // Haker tomonga surish
+  top: 38%;
+  width: 140px;
+  z-index: 5;
+}

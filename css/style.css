@@ -1,0 +1,246 @@
+.navbar {
+  max-width: 1144px;
+  width: 95%;
+  margin: 20px auto;
+  background-color: #000000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 2rem;
+  border-radius: 4px;
+  font-family: "Roboto", sans-serif;
+}
+.navbar .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.navbar .logo img {
+  width: 28px;
+  height: auto;
+}
+.navbar .logo span {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+.navbar nav {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
+.navbar nav ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 1.8rem;
+  margin: 0;
+  padding: 0;
+}
+.navbar nav ul li a {
+  color: #00ff00;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+.navbar nav ul li a:hover {
+  opacity: 0.7;
+}
+.navbar nav ul .btn-signin {
+  margin-left: 0.5rem;
+}
+.navbar nav ul .btn-signin a {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 6px 16px;
+  border-radius: 2px;
+  font-weight: 900;
+  transition: 0.3s;
+}
+.navbar nav ul .btn-signin a:hover {
+  background-color: #00ff00;
+  color: #000000;
+}
+.navbar .social-icons {
+  display: flex;
+  gap: 10px;
+}
+.navbar .social-icons i {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000000;
+  background-color: #ffffff;
+  border-radius: 50%;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.navbar .social-icons i:hover {
+  background-color: #00ff00;
+  transform: scale(1.1);
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  position: relative;
+}
+.hero__image {
+  position: relative;
+  width: 600px;
+  height: 600px;
+}
+.hero__image img {
+  position: absolute;
+}
+.hero__image .decor-stats {
+  left: 20px;
+  top: 50px;
+  width: 200px;
+  z-index: 2;
+}
+.hero__image .decor-star {
+  left: 350px;
+  top: 80px;
+  width: 200px;
+  z-index: 1;
+}
+.hero__image .main-person {
+  left: 150px;
+  top: 0;
+  width: 500px;
+  z-index: 3;
+  filter: drop-shadow(4px 4px 0 white) drop-shadow(-4px -4px 0 white);
+}
+.hero__content {
+  position: relative;
+  flex: 1;
+  z-index: 10;
+}
+
+.title {
+  font-size: 5.5rem;
+  font-weight: 900;
+  line-height: 0.85;
+  margin-bottom: 2rem;
+  color: #000;
+}
+.title .highlight {
+  background-color: #00ff00;
+  padding: 0 15px;
+  display: inline-block;
+}
+
+.info-box {
+  background-color: #000;
+  color: #fff;
+  padding: 40px;
+  max-width: 500px;
+  position: relative;
+}
+.info-box__header .tag {
+  background: #fff;
+  color: #000;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+  padding: 2px 10px;
+}
+.info-box .qulf {
+  position: absolute;
+  bottom: -40px;
+  right: -40px;
+  width: 140px;
+  z-index: 20;
+}
+
+.sphere {
+  position: absolute;
+  left: -60px;
+  top: 38%;
+  width: 140px;
+  z-index: 5;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: url("./assets/bg-texture.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: "Roboto Mono", monospace;
+}
+
+.title {
+  font-size: 8rem;
+  font-weight: 900;
+  margin: 0 0 2rem 0;
+  line-height: 0.9;
+  color: #000;
+}
+.title .highlight {
+  background-color: #00ff00;
+  padding: 0 15px;
+  display: inline-block;
+}
+
+.info-box {
+  background-color: #000;
+  color: #fff;
+  padding: 2.5rem;
+  border: 2px solid #000;
+}
+.info-box__header {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 1.5rem;
+}
+.info-box__header .tag {
+  background-color: #fff;
+  color: #000;
+  display: inline-block;
+  width: fit-content;
+  padding: 2px 10px;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.info-box__text {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+.info-box__footer {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.info-box__footer .btn-white {
+  background: #fff;
+  border: none;
+  padding: 10px 25px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.info-box__footer .read-more {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  border-bottom: 1px solid #fff;
+}
+
+/*# sourceMappingURL=style.css.map */

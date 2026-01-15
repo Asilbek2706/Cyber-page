@@ -1,0 +1,79 @@
+@use "./sass/variables" as v;
+@use "./sass/navbar";
+@use "./sass/hero";
+
+body {
+  margin: 0;
+  padding: 0;
+  background: url('./assets/bg-texture.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Roboto Mono', monospace;
+}
+
+
+.title {
+  font-size: 8rem; // Juda katta sarlavha
+  font-weight: 900;
+  margin: 0 0 2rem 0;
+  line-height: 0.9;
+  color: #000;
+
+  .highlight {
+    background-color: v.$primary; // Yashil fon
+    padding: 0 15px;
+    display: inline-block;
+  }
+}
+
+.info-box {
+  background-color: #000;
+  color: #fff;
+  padding: 2.5rem;
+  border: 2px solid #000;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 1.5rem;
+
+    .tag {
+      background-color: #fff;
+      color: #000;
+      display: inline-block;
+      width: fit-content;
+      padding: 2px 10px;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+  }
+
+  &__text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    .btn-white {
+      background: #fff;
+      border: none;
+      padding: 10px 25px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .read-more {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 0.9rem;
+      border-bottom: 1px solid #fff;
+    }
+  }
+}

@@ -1,0 +1,109 @@
+@use "./variables" as v;
+
+.navbar {
+  // 1. Asosiy blokni markazga olish
+  max-width: 1144px;
+  width: 95%;        // Mobil ekranlarda chetidan joy qolishi uchun
+  margin: 20px auto; // Tepadan masofa va O'RTADA turishi uchun (bu eng muhimi)
+
+  // 2. Tashqi ko'rinish
+  background-color: v.$bg-dark;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 2rem;
+  border-radius: 4px; // Burchaklarni biroz yumshatish (ixtiyoriy)
+  font-family: 'Roboto', sans-serif;
+
+  // Logo qismi
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    img {
+      width: 28px;
+      height: auto;
+    }
+
+    span {
+      color: v.$text-light;
+      font-weight: bold;
+      font-size: 1.1rem;
+      letter-spacing: 0.5px;
+    }
+  }
+
+  // Menyu qismi
+  nav {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+
+    ul {
+      display: flex;
+      list-style: none;
+      align-items: center;
+      gap: 1.8rem; // Linklar orasidagi masofa
+      margin: 0;
+      padding: 0;
+
+      li a {
+        color: v.$primary; // Yashil rang
+        text-decoration: none;
+        font-weight: 800;
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+        transition: 0.3s;
+
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+
+      // Sign In tugmasi - Menyu ichidagi oxirgi element
+      .btn-signin {
+        margin-left: 0.5rem;
+
+        a {
+          background-color: v.$text-light;
+          color: v.$bg-dark;
+          padding: 6px 16px;
+          border-radius: 2px;
+          font-weight: 900;
+          transition: 0.3s;
+
+          &:hover {
+            background-color: v.$primary;
+            color: v.$bg-dark;
+          }
+        }
+      }
+    }
+  }
+
+  // Ijtimoiy tarmoqlar
+  .social-icons {
+    display: flex;
+    gap: 10px;
+
+    i {
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: v.$bg-dark;
+      background-color: v.$text-light;
+      border-radius: 50%;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: 0.3s ease;
+
+      &:hover {
+        background-color: v.$primary;
+        transform: scale(1.1);
+      }
+    }
+  }
+}
