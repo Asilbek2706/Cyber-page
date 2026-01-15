@@ -3,23 +3,33 @@
 @use "./sass/hero";
 
 body {
-  margin: 0;
-  padding: 0;
-  background: url('./assets/bg-texture.jpg') no-repeat center center fixed;
-  background-size: cover;
-  font-family: 'Roboto Mono', monospace;
+  background-color: #c0c0c0;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    opacity: 0.2;
+    z-index: -1;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  }
 }
 
 
 .title {
-  font-size: 8rem; // Juda katta sarlavha
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 4.5rem;
   font-weight: 900;
-  margin: 0 0 2rem 0;
+  margin: 102px 0;
   line-height: 0.9;
   color: #000;
 
   .highlight {
-    background-color: v.$primary; // Yashil fon
+    background-color: v.$bg-dark;
+    color: v.$primary;
     padding: 0 15px;
     display: inline-block;
   }

@@ -1,28 +1,24 @@
 @use "./variables" as v;
 
 .navbar {
-  // 1. Asosiy blokni markazga olish
   max-width: 1144px;
-  width: 95%;        // Mobil ekranlarda chetidan joy qolishi uchun
-  margin: 20px auto; // Tepadan masofa va O'RTADA turishi uchun (bu eng muhimi)
-
-  // 2. Tashqi ko'rinish
+  width: 95%;
+  margin: 20px auto;
   background-color: v.$bg-dark;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.6rem 2rem;
-  border-radius: 4px; // Burchaklarni biroz yumshatish (ixtiyoriy)
+  border-radius: 4px;
   font-family: 'Roboto', sans-serif;
 
-  // Logo qismi
   .logo {
     display: flex;
     align-items: center;
     gap: 10px;
 
     img {
-      width: 28px;
+      width: 60px;
       height: auto;
     }
 
@@ -34,7 +30,6 @@
     }
   }
 
-  // Menyu qismi
   nav {
     display: flex;
     justify-content: center;
@@ -44,12 +39,12 @@
       display: flex;
       list-style: none;
       align-items: center;
-      gap: 1.8rem; // Linklar orasidagi masofa
+      gap: 1.8rem;
       margin: 0;
       padding: 0;
 
       li a {
-        color: v.$primary; // Yashil rang
+        color: v.$primary;
         text-decoration: none;
         font-weight: 800;
         font-size: 0.8rem;
@@ -61,7 +56,6 @@
         }
       }
 
-      // Sign In tugmasi - Menyu ichidagi oxirgi element
       .btn-signin {
         margin-left: 0.5rem;
 
@@ -82,7 +76,6 @@
     }
   }
 
-  // Ijtimoiy tarmoqlar
   .social-icons {
     display: flex;
     gap: 10px;
