@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
   gap: 80px;
-  max-width: 1320px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 50px 20px;
   position: relative;
@@ -14,29 +14,31 @@
     position: relative;
     width: 600px;
     height: 600px;
+    left: -10px;
 
     img {
       position: absolute;
     }
 
     .decor-stats {
-      left: 20px;
-      top: 50px;
-      width: 200px;
+      left: -10px;
+      top: -150px;
+      width: 250px;
+      height: 400px;
       z-index: 2;
     }
 
     .decor-star {
-      left: 310px;
+      left: 285px;
       top: 65px;
       width: 280px;
       z-index: 1;
     }
 
     .main-person {
-      left: 20px;
-      top: 0;
-      width: 650px;
+      left: -110px;
+      top: -50px;
+      width: 800px;
       z-index: 3;
       filter: drop-shadow(4px 4px 0 white) drop-shadow(-4px -4px 0 white);
     }
@@ -50,6 +52,8 @@
 }
 
 .title {
+  position: relative;
+  right: -100px;
   font-size: 3rem;
   font-weight: 900;
   line-height: 0.85;
@@ -57,6 +61,7 @@
   color: #000;
 
   .highlight {
+
     background-color: v.$primary;
     padding: 0 15px;
     display: inline-block;
@@ -64,6 +69,7 @@
 }
 
 .info-box {
+
   background-color: black;
   color: #fff;
   padding: 40px;
@@ -74,6 +80,7 @@
   align-items: center;
   gap: 8px;
   margin-bottom: 5px;
+  right: -100px;
 
   &__header .tag {
     background: #fff;
@@ -99,7 +106,7 @@
 
 .sphere {
   position: absolute;
-  left: -65px;
+  left: 20px;
   top: 36%;
   width: 140px;
   z-index: 5;
